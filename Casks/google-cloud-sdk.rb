@@ -15,7 +15,7 @@ cask "google-cloud-sdk" do
     system_command "#{staged_path}/#{token}/install.sh",
                    args: [
                      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
-                     "--rc-path", "false", "--quiet"
+                     "--rc-path", "false", "--override-components", "core", "gcloud-deps", "bq", "gcloud", "gsutil"
                    ],
                    env:  { "CLOUDSDK_PYTHON" => Formula["python"].opt_bin/"python3" }
   end
